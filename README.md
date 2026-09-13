@@ -55,12 +55,28 @@
 
 다크 모드는 뷰어의 시스템 설정을 따라갑니다. 같은 파일 아래쪽 다크 블록에 같은 이름의 값이 있으니 둘 다 바꿔야 합니다.
 
-## 배포 (인터넷에 올리기)
+## 공개 주소와 다시 올리기
 
-가장 쉬운 방법 두 가지입니다.
+- 공개 주소: https://jigear.github.io/
+- 저장소: https://github.com/JiGear/JiGear.github.io
 
-- **Netlify Drop**: https://app.netlify.com/drop 에 이 폴더를 통째로 끌어다 놓으면 주소가 생깁니다.
-- **GitHub Pages**: 이 폴더를 저장소에 올리고 Settings → Pages 에서 branch를 선택합니다.
+이 폴더가 곧 저장소입니다. 고친 뒤 올리면 1~2분 안에 공개 주소에 반영됩니다.
+
+**GitHub Desktop으로 올리기**
+
+1. GitHub Desktop 에서 File → Add local repository 로 이 폴더를 한 번 추가합니다.
+2. 파일을 고친 뒤 왼쪽 아래 Summary 에 한 줄 설명을 적고 **Commit to main** 을 누릅니다.
+3. 위쪽 **Push origin** 을 누릅니다.
+
+**터미널로 올리기**
+
+```
+git add -A
+git commit -m "내용 수정"
+git push
+```
+
+`.gitignore` 에 적힌 파일은 올라가지 않습니다. 공개하면 안 되는 이미지는 여기에 이름을 추가하세요.
 
 ## PDF로 저장
 
