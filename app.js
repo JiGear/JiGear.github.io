@@ -50,6 +50,20 @@
         </div>`).join("")}
     </div>`;
 
+  /* 포트폴리오 바로가기 */
+  if (C.portfolioLinks && C.portfolioLinks.length) {
+    $("portfolio-links").innerHTML = `<div class="plinks">${C.portfolioLinks.map(x => `
+      <div class="plink">
+        <div class="plink__main">
+          <div class="plink__title">${esc(x.title)}${x.sub ? `<span class="plink__sub">${esc(x.sub)}</span>` : ""}</div>
+          <div class="plink__kw">${(x.keywords || []).map(k => badge(k, "secondary")).join("")}</div>
+        </div>
+        <div class="plink__actions">${(x.links || []).map(l => `<a class="btn btn--outline btn--sm" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}</div>
+      </div>`).join("")}</div>`;
+  } else {
+    $("links-section").hidden = true;
+  }
+
   /* 업무 판단 기준 */
   const pr = C.principles;
   $("principles").innerHTML = `

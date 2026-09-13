@@ -24,6 +24,7 @@
 - 프로필 사진 → `profile.avatar` 에 `"assets/photo.jpg"` 처럼. 비워두면 `profile.initials` 글자가 동그라미로 표시됩니다
 - 첫 화면 숫자 타일 → `profile.stats` (4개 권장)
 - 경력 요약 표 → `timeline`
+- 포트폴리오 바로가기 → `portfolioLinks` (제목, 한 줄 설명, 키워드, 링크 버튼)
 - 회사별 작업 항목 → `careers[...].projects[...].works` (항목 하나가 `{ title, slogan, lead, points, lesson }`)
 - 한 항목 안에 소항목을 더 두려면 `subs: [ { title, slogan, points } ]` (Voyager 전투 시스템 참고)
 - 인생 목표 한 줄 → `principles.goal.title`

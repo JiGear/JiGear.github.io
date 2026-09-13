@@ -208,6 +208,16 @@ button.btn { font-family: inherit; line-height: 1; }
 .section__head h2 { font-size: 26px; font-weight: 700; letter-spacing: -.025em; }
 .section__head .separator { margin-top: 12px; }
 
+/* ---------- 포트폴리오 바로가기 ---------- */
+.section--links { padding-top: 8px; }
+.plinks { border-top: 1px solid var(--border); }
+.plink { display: grid; grid-template-columns: 1fr auto; gap: 10px 20px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border); }
+.plink__title { font-weight: 600; font-size: 15px; letter-spacing: -.01em; }
+.plink__sub { font-weight: 400; font-size: 13px; color: var(--muted-foreground); margin-left: 8px; }
+.plink__kw { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.plink__actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; }
+@media (max-width: 560px) { .plink { grid-template-columns: 1fr; } .plink__actions { justify-content: flex-start; } .plink__sub { display: block; margin-left: 0; } }
+
 /* ---------- 업무 판단 기준 ---------- */
 .quote { font-size: 18px; font-weight: 500; letter-spacing: -.01em; line-height: 1.55; max-width: 36em; color: var(--foreground); padding-left: 16px; border-left: 2px solid var(--foreground); }
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
@@ -357,7 +367,7 @@ button.btn { font-family: inherit; line-height: 1; }
   .work summary, .sub summary { cursor: default; }
 
   .section__head, .career__head, .project__top, .personal__top, .work summary, .sub summary, .block__label { break-after: avoid; }
-  .stats, .timeline__row, .principle, .goal, .quote, .skill, .sub, .block, .work__lesson, .project__top, .personal__top { break-inside: avoid; }
+  .plink, .stats, .timeline__row, .principle, .goal, .quote, .skill, .sub, .block, .work__lesson, .project__top, .personal__top { break-inside: avoid; }
 
   #careers-section, #design-section { break-before: page; padding-top: 0; }
   #design-portfolio .personal { break-inside: avoid; }

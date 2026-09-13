@@ -49,6 +49,36 @@ window.CONTENT = {
     { period: "2026.08 – 진행 중", org: "개인 프로젝트", note: "Project Necromancer · 1인 개발" }
   ],
 
+  /* ---------- 포트폴리오 바로가기 (첫 화면 바로 아래) ---------- */
+  // 문서가 공개 링크로 열리는 포트폴리오만 적습니다. 설명은 키워드만 짧게.
+  portfolioLinks: [
+    {
+      title: "집중의 맹수 '아르그린'",
+      sub: "보스 전투 기획서",
+      keywords: ["보스 전투", "부위 강화", "BT 설계"],
+      links: [
+        { label: "PDF", url: "https://drive.google.com/file/d/1IL0PEnvmQD00OGN4B8aN8TSGKBx2sTFk/view" }
+      ]
+    },
+    {
+      title: "레나타",
+      sub: "카오스 제로 나이트메어 신규 캐릭터",
+      keywords: ["덱빌딩", "캐릭터 기획", "전투 시스템"],
+      links: [
+        { label: "기획 시트", url: "https://docs.google.com/spreadsheets/d/15q8_woN2EcqzF4dQ7qeBu_snBtDfYMrm14K1-m-WWQM" }
+      ]
+    },
+    {
+      title: "CloneCommander",
+      sub: "개인 프로토타입",
+      keywords: ["밸런스", "성장 설계", "파라미터"],
+      links: [
+        { label: "파라미터 시트", url: "https://docs.google.com/spreadsheets/d/1AwAWNmZPzbs_AS8-BT2yNAVygNN7MRwh/edit?usp=sharing" },
+        { label: "설계 폴더", url: "https://drive.google.com/drive/folders/175rVGkil2LmVLmhTkJrhiCDM2HJIcVsN" }
+      ]
+    }
+  ],
+
   /* ---------- 저는 이렇게 판단합니다 ---------- */
   principles: {
     quote: "기획자의 모든 판단에는 기준이 있어야 하고, 그 기준은 모든 작업자가 같은 방향을 보게 만드는 것이어야 합니다.",
@@ -344,10 +374,6 @@ window.CONTENT = {
       points: [
         "캐릭터 간 블록 소모 상호작용 빌드: 3체인이 가장 강한 캐릭터 + 아군 3체인에 반응하는 추가 효과, 1체인을 일정 횟수 난사하면 블록 추가",
         "스테이지별 요구 체인 수를 달리해 캐릭터를 다양하게 조합하는 공략의 재미"
-      ],
-      links: [
-        { label: "파라미터 · 프로세스 시트", url: "https://docs.google.com/spreadsheets/d/1AwAWNmZPzbs_AS8-BT2yNAVygNN7MRwh/edit?usp=sharing" },
-        { label: "밸런스 · 성장 설계 폴더", url: "https://drive.google.com/drive/folders/175rVGkil2LmVLmhTkJrhiCDM2HJIcVsN" }
       ]
     }
   ],
@@ -369,9 +395,6 @@ window.CONTENT = {
         "왼팔 · 오른팔 · 꼬리 중 한 부위만 강화해, 같은 공격의 차징 시간 · 범위 · 피해를 바꾸는 보스",
         "플레이어가 외형과 전조를 읽고 회피 · 반격 타이밍을 조절하도록 설계. 직접 타격은 자세로, 광역은 바닥 텔레그래프로 전달",
         "BT 구조 · 패턴 7종 · 오버드라이브 · 애니메이션과 FX 리소스 리스트까지 작성. 원본 몽타주 속도 조절로 신규 리소스를 최소화"
-      ],
-      links: [
-        { label: "기획서 PDF 열기", url: "https://drive.google.com/file/d/1IL0PEnvmQD00OGN4B8aN8TSGKBx2sTFk/view" }
       ]
     },
     {
@@ -389,9 +412,6 @@ window.CONTENT = {
         "신규 지속 피해 2종(화상 · 감전)과 번뜩임 카드 5단계, 컷씬 스킬 '옥죄어진 실'",
         "전용 보스 '수라화': 단단한 갑주(피해 −60%) → 지속 피해로 '탈피' 유도, 규칙을 따르지 않으면 '독기' 카드가 덱을 오염",
         "시스템 시트: CardGroup · Keyword · BattleEffect · Brilliance 테이블 컬럼과 ID 규칙을 실제 데이터 형태로 정리"
-      ],
-      links: [
-        { label: "기획 시트 열기", url: "https://docs.google.com/spreadsheets/d/15q8_woN2EcqzF4dQ7qeBu_snBtDfYMrm14K1-m-WWQM" }
       ]
     }
   ],
