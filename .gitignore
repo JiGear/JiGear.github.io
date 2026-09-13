@@ -1,0 +1,10 @@
+# 로컬 도구 설정
+.claude/
+
+# 사이트에서 쓰지 않는 이미지 (로컬 보관용)
+assets/argrin.jpg
+assets/clonecommander.png
+assets/necro-*.png
+
+# 공개하지 않는 이미지
+assets/youkai.jpg
