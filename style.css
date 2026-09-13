@@ -315,7 +315,52 @@ button.btn { font-family: inherit; line-height: 1; }
 
 /* ---------- 마무리 ---------- */
 .closing { padding: 56px 0 40px; border-top: 1px solid var(--border); margin-top: 56px; }
-.closing p { font-size: 15px; color: var(--muted-foreground); max-width: 36em; }
-.closing p + p { margin-top: 8px; font-weight: 600; color: var(--foreground); }
+.closing p { font-size: 15px; max-width: 36em; font-weight: 600; color: var(--foreground); }
+.closing p:not(:last-of-type) { font-weight: 400; color: var(--muted-foreground); }
+.closing p + p { margin-top: 8px; }
 .closing .contact { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px; }
 .footer { font-family: var(--font-mono); font-size: 12px; color: var(--muted-foreground); padding: 0 0 40px; }
+
+/* ---------- 인쇄 · PDF ---------- */
+.print-only { display: none; }
+
+@media print {
+  :root:not([data-theme="__print"]) {
+    --background: #FFFFFF;
+    --foreground: #09090B;
+    --card: #FFFFFF;
+    --muted: #F4F4F5;
+    --muted-foreground: #71717A;
+    --border: #E4E4E7;
+    --input: #E4E4E7;
+    --primary: #18181B;
+    --primary-foreground: #FAFAFA;
+    --secondary: #F4F4F5;
+    --secondary-foreground: #18181B;
+    --accent: #F4F4F5;
+    --ring: #A1A1AA;
+  }
+  @page { size: A4; margin: 14mm 12mm; }
+  body { font-size: 12.5px; line-height: 1.6; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+
+  .nav, .toast, .chev, [data-copy] { display: none !important; }
+  .print-only { display: inline-flex !important; }
+
+  .hero { padding: 0 0 20px; }
+  .hero::before { display: none; }
+  .hero__headline { margin-top: 24px; }
+  .stats, .timeline { margin-top: 24px; }
+  .section { padding-top: 28px; }
+  .section__head { margin-bottom: 18px; }
+  .card { box-shadow: none; }
+  .work summary, .sub summary { cursor: default; }
+
+  .section__head, .career__head, .project__top, .personal__top, .work summary, .sub summary, .block__label { break-after: avoid; }
+  .stats, .timeline__row, .principle, .goal, .quote, .skill, .sub, .block, .work__lesson, .project__top, .personal__top { break-inside: avoid; }
+
+  #careers-section, #design-section { break-before: page; padding-top: 0; }
+  #design-portfolio .personal { break-inside: avoid; }
+  .closing { margin-top: 28px; padding: 24px 0 8px; }
+  .footer { padding-bottom: 0; }
+}

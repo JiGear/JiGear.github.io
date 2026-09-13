@@ -37,7 +37,7 @@
     <p class="hero__headline">${esc(p.headline)}</p>
     <p class="hero__summary">${nl(p.summary)}</p>
     <div class="hero__links">
-      ${p.email ? `<button type="button" class="btn btn--primary" data-copy="${esc(p.email)}" data-label="이메일 주소 복사">${icoCopy}<span>이메일 주소 복사</span></button>` : ""}
+      ${p.email ? `<button type="button" class="btn btn--primary" data-copy="${esc(p.email)}" data-label="이메일 주소 복사">${icoCopy}<span>이메일 주소 복사</span></button><a class="btn btn--outline print-only" href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : ""}
       ${(p.links || []).map(l => `<a class="btn btn--outline" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}
     </div>
     ${p.stats && p.stats.length ? `<div class="stats">${p.stats.map(s => `
@@ -161,7 +161,7 @@
   $("closing").innerHTML = `
     ${(C.closing && C.closing.lines || []).map(l => `<p>${nl(l)}</p>`).join("")}
     <div class="contact">
-      ${p.email ? `<button type="button" class="btn btn--primary btn--sm" data-copy="${esc(p.email)}" data-label="${esc(p.email)}" aria-label="이메일 주소 복사: ${esc(p.email)}">${icoCopy}<span>${esc(p.email)}</span></button>` : ""}
+      ${p.email ? `<button type="button" class="btn btn--primary btn--sm" data-copy="${esc(p.email)}" data-label="${esc(p.email)}" aria-label="이메일 주소 복사: ${esc(p.email)}">${icoCopy}<span>${esc(p.email)}</span></button><a class="btn btn--outline btn--sm print-only" href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : ""}
       ${(p.links || []).map(l => `<a class="btn btn--outline btn--sm" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}
     </div>`;
   $("footer").textContent = `© ${new Date().getFullYear()} ${p.name}`;
@@ -221,4 +221,14 @@
       showToast(`복사가 막혀 있습니다. 주소를 직접 복사해 주세요 <span class="toast__sub toast__sel">${esc(text)}</span>`, 6000);
     }
   });
+  /* 인쇄 · PDF: 접힌 항목을 모두 펼칩니다. 주소 끝에 ?print 를 붙이면 처음부터 펼친 상태로 열립니다 */
+  const openAll = () => document.querySelectorAll("details").forEach((d) => {
+    if (!d.open) { d.dataset.printOpened = "1"; d.open = true; }
+  });
+  const closeOpened = () => document.querySelectorAll("details[data-print-opened]").forEach((d) => {
+    d.open = false; delete d.dataset.printOpened;
+  });
+  window.addEventListener("beforeprint", openAll);
+  window.addEventListener("afterprint", closeOpened);
+  if (/[?&]print\b/.test(location.search)) openAll();
 })();
