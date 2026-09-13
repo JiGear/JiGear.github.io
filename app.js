@@ -165,9 +165,10 @@
 
   $("personal").innerHTML = (C.personal || []).map(pcard).join("");
 
-  if (C.designPortfolio && C.designPortfolio.length) {
-    $("design-portfolio").innerHTML = C.designPortfolio.map(pcard).join("");
-  } else {
+  const designWrap = $("design-portfolio");
+  if (designWrap && C.designPortfolio && C.designPortfolio.length) {
+    designWrap.innerHTML = C.designPortfolio.map(pcard).join("");
+  } else if ($("design-section")) {
     $("design-section").hidden = true;
   }
 

@@ -29,7 +29,6 @@
 - 한 항목 안에 소항목을 더 두려면 `subs: [ { title, slogan, points } ]` (Voyager 전투 시스템 참고)
 - 인생 목표 한 줄 → `principles.goal.title`
 - 개인 프로젝트 → `personal`
-- 상용작 기반 설계 문서 → `designPortfolio` (개인 프로젝트와 같은 형식)
 - 제목 붙은 소단락 → `blocks: [ { label, items } ]`. 문장 안 `**굵게**` 사용 가능
 - 버튼 여러 개 → `links: [ { label, url } ]`
 - 이름 아래 장르 뱃지 → `tags: ["키워드", ...]`
