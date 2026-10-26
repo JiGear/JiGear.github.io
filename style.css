@@ -186,8 +186,8 @@ button.btn { font-family: inherit; line-height: 1; }
 .hero__summary { margin-top: 14px; color: var(--muted-foreground); max-width: 34em; font-size: 15px; }
 .hero__links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
 
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 44px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-@media (max-width: 640px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+.stats { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 1px; margin-top: 44px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+@media (max-width: 640px) { .stats .stat { padding: 14px 12px; } .stats .stat__value { font-size: 19px; } }
 .stat { background: var(--background); padding: 16px 18px; }
 .stat__value { font-size: 22px; font-weight: 700; letter-spacing: -.03em; line-height: 1.2; font-variant-numeric: tabular-nums; }
 .stat__label { font-size: 12.5px; color: var(--muted-foreground); margin-top: 4px; }
@@ -261,6 +261,8 @@ button.btn { font-family: inherit; line-height: 1; }
 .project__duties { list-style: none; padding: 0; margin-top: 6px; font-size: 13.5px; color: var(--muted-foreground); }
 .project__duties li { padding-left: 12px; position: relative; margin-top: 2px; }
 .project__duties li::before { content: "–"; position: absolute; left: 0; }
+.project__duties li:only-child { padding-left: 0; }
+.project__duties li:only-child::before { content: none; }
 .project__main { margin-top: 18px; border-top: 1px solid var(--border); }
 
 /* Accordion (shadcn) */
