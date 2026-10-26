@@ -150,7 +150,7 @@
       ${pp.image ? `<div class="personal__img"><img src="${esc(pp.image)}" alt="${esc(pp.imageAlt || pp.name)}" loading="lazy"></div>` : ""}
       ${pp.slogan ? `<p class="personal__slogan">${esc(pp.slogan)}</p>` : ""}
       ${pp.lead ? `<p class="personal__lead">${nl(pp.lead)}</p>` : ""}
-      ${list(pp.points, "personal__points")}
+      ${pp.points && pp.points.length ? `<ul class="personal__points">${pp.points.map(x => `<li>${rich(x)}</li>`).join("")}</ul>` : ""}
       ${pp.blocks && pp.blocks.length ? `<div class="blocks">${pp.blocks.map(b => `
         <div class="block">
           <div class="block__label">${esc(b.label)}</div>
