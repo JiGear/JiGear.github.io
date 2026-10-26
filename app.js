@@ -78,10 +78,6 @@
     </div>
     ${pr.goal ? `<div class="goal"><span class="goal__label">${esc(pr.goal.label || "인생 목표")}</span><span class="goal__title">${esc(pr.goal.title)}</span></div>` : ""}`;
 
-  /* 작업 이력 */
-  $("skills").innerHTML = `<div class="skills">${(C.skills || []).map(g => `
-    <div class="skill"><div class="skill__group">${esc(g.group)}</div><ul>${(g.items || []).map(i => `<li>${badge(i, "secondary")}</li>`).join("")}</ul></div>`).join("")}</div>`;
-
   /* 경력 */
   const sub = (x) => `
     <details class="sub">
