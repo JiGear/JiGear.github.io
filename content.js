@@ -39,7 +39,7 @@ window.CONTENT = {
     ],
     // 링크는 필요한 만큼 추가/삭제
     links: [
-      { label: "자기소개 PDF", url: "https://drive.google.com/file/d/1x69XJOzxmHDGf6vp_kTgjDepuMOpA4US/view" },
+      { label: "자기소개 PDF", url: "https://drive.google.com/file/d/104KmbUJs-jhNk161RAQKuLCys9VO66PB/view" },
       { label: "포트폴리오 드라이브", url: "https://drive.google.com/drive/folders/1hO8KYDuwGt16Fxy_00vRGnAI9WNi_qmj" }
     ]
   },
