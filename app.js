@@ -37,7 +37,7 @@
     <p class="hero__headline">${esc(p.headline)}</p>
     <p class="hero__summary">${nl(p.summary)}</p>
     <div class="hero__links">
-      ${p.email ? `<button type="button" class="btn btn--primary" data-copy="${esc(p.email)}" data-label="이메일 주소 복사">${icoCopy}<span>이메일 주소 복사</span></button><a class="btn btn--outline print-only" href="mailto:${esc(p.email)}">${esc(p.email)}</a>` : ""}
+      ${p.siteUrl ? `<a class="btn btn--outline print-only" href="${esc(p.siteUrl)}">${esc(p.siteUrl.replace(/^https?:\/\//, "").replace(/\/$/, ""))}</a>` : ""}
       ${(p.links || []).map(l => `<a class="btn btn--outline" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join("")}
     </div>
     ${p.stats && p.stats.length ? `<div class="stats">${p.stats.map(s => `

@@ -29,6 +29,8 @@ window.CONTENT = {
     summary:
       "라이브 서비스에서 내가 만든 콘텐츠에 유저가 반응하는 순간의 보람을 알게 됐고, 그 경험을 원동력 삼아 꾸준히 성장하고 있습니다.",
     email: "wlghd261@gmail.com",
+    // PDF로 출력할 때만 맨 위에 보이는 웹 경력기술서 주소
+    siteUrl: "https://jigear.github.io/",
     // 첫 화면 숫자 타일. 4개가 가장 보기 좋습니다. 지우려면 줄을 삭제하세요.
     stats: [
       { value: "1년 9개월", label: "실무 경력" },
@@ -37,6 +39,7 @@ window.CONTENT = {
     ],
     // 링크는 필요한 만큼 추가/삭제
     links: [
+      { label: "자기소개 PDF", url: "https://drive.google.com/file/d/1uI8IYK5lE3AgIONtNu2dtdZSzPh4DsKE/view" },
       { label: "포트폴리오 드라이브", url: "https://drive.google.com/drive/folders/1hO8KYDuwGt16Fxy_00vRGnAI9WNi_qmj" }
     ]
   },
@@ -53,7 +56,7 @@ window.CONTENT = {
   portfolioLinks: [
     {
       title: "네크로맨서, 이사 갑니다",
-      sub: "기획 포트폴리오 · 27쪽",
+      sub: "기획 포트폴리오 · 28쪽",
       keywords: ["루트 액션 + 디펜스", "전투 · 몬스터 설계", "밸런스 · 파이프라인"],
       links: [
         { label: "PDF", url: "docs/necromancer-portfolio.pdf" },
